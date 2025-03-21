@@ -2,16 +2,146 @@
   "camera": {
     "type": "perspective",
     "focal_length": 3,
-    "eye": [0,0,5],
-    "up": [0,1,0],
-    "look": [0,0,-1],
+    "eye": [0, -30, 30],
+    "up": [0, 1, 0],
+    "look": [0.1, 1, -1],
     "height": 1,
     "width": 1.7777777778
   },
   "materials": [
+    {
+      "name": "yellow metal",
+      "ka": [0.8, 0.8, 0.2],
+      "kd": [0.8, 0.8, 0.2],
+      "ks": [0.3, 0.3, 0.3],
+      "km": [0.2, 0.2, 0.2],
+      "phong_exponent": 500
+    },
+    {
+      "name": "white plastic",
+      "ka": [0.9, 0.9, 0.9],
+      "kd": [1.0, 1.0, 1.0],
+      "ks": [0.5, 0.5, 0.5],
+      "km": [0.05, 0.05, 0.05],
+      "phong_exponent": 200
+    },
+    {
+      "name": "red metal",
+      "ka": [0.894118,0.101961,0.109804],
+      "kd": [0.894118,0.101961,0.109804],
+      "ks": [0.894118,0.101961,0.109804],
+      "km": [0.894118,0.101961,0.109804],
+      "phong_exponent": 2000
+    },
+    {
+      "name": "green thing",
+      "ka": [0.15,0.9,0.20],
+      "kd": [0.15,0.9,0.20],
+      "ks": [0.15,0.9,0.20],
+      "km": [0.15,0.9,0.20],
+      "phong_exponent": 300
+    },
+    {
+      "name": "black metal",
+      "ka": [0.1, 0.1, 0.1],
+      "kd": [0.4, 0.4, 0.4],
+      "ks": [0.5, 0.5, 0.5],
+      "km": [0.2, 0.2, 0.2],
+      "phong_exponent": 800
+    },
+    {
+      "name": "purple metal",
+      "ka": [0.596078,0.305882,0.639216],
+      "kd": [0.596078,0.305882,0.639216],
+      "ks": [0.2,0.2,0.2],
+      "km": [0.1,0.1,0.1],
+      "phong_exponent": 500
+    }
   ],
-  "lights":[
+  "lights": [
+    {
+      "type": "point",
+      "position": [2, 5, 10],
+      "color": [1, 1, 1]
+    },
+    {
+      "type": "point",
+      "position": [-2, -5, 10],
+      "color": [0.7, 0.7, 0.7]
+    }
   ],
   "objects": [
+    {
+      "type": "plane",
+      "material": "black metal",
+      "point": [0, 0, 0],
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "plane",
+      "material": "purple metal",
+      "point": [0,0,-1],
+      "normal": [0,1,1]
+    },
+    {
+      "type": "sphere",
+      "material": "yellow metal",
+      "center": [-1.5, 0, 1],
+      "radius": 0.75
+    },
+    {
+      "type": "sphere",
+      "material": "black metal",
+      "center": [1.5, 0, 0.5],
+      "radius": 0.5
+    },
+    {
+      "type": "sphere",
+      "material": "green thing",
+      "center": [3, 1.5, 0.5],
+      "radius": 2 
+    },
+    {
+      "type": "sphere",
+      "material": "white plastic",
+      "center": [7, 0, 1.5],
+      "radius": 2 
+    },
+    {
+      "type": "triangle",
+      "corners": [
+        [0, 0, 2],  
+        [-1, -1, 0.2],  
+        [1, -1, 0]  
+      ],
+      "material": "red metal"
+    },
+    {
+      "type": "triangle",
+      "corners": [
+        [0.5, 0.5, 2], 
+        [2, -2, 0.5],
+        [0.5, 2, 0.5] 
+      ],
+      "material": "red metal"
+    },
+    {
+      "type": "triangle",
+      "corners": [
+        [0.5, 0.5, 2], 
+        [0.5, 2, 0.5], 
+        [-2, -2, 0.5]
+      ],
+      "material": "red metal"
+    },
+    {
+      "type": "triangle",
+      "corners": [
+        [-2, -2, 0.5], 
+        [2, -2, 0.5], 
+        [0.5, 2, 0.5]  
+      ],
+      "material": "red metal"
+    }
   ]
 }
